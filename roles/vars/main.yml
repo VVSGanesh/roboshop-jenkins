@@ -1,0 +1,9 @@
+folder-name: CI Pipeline
+component:
+  loop:
+    - frontend
+    - catalogue
+    - cart
+    - user
+    - shipping
+    - payment
