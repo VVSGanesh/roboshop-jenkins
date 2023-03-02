@@ -1,4 +1,4 @@
-- name: create folder jenkins
+- name: create folder
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/folder.xml') }}"
     name: CI Pipeline
@@ -7,7 +7,7 @@
     user: admin
 
 - name: create pipeline
-  community.general.jenkins_job_info:
+  community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/job.xml') }}"
     name: "CI Pipeline/{ { item } }"
     loop:
